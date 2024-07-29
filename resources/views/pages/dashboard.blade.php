@@ -60,7 +60,7 @@
     </div>
 </div>
 
-<div class="row">
+<!-- <div class="row">
     <div class="col-12 col-md-12">
         <form class="form-inline">
             <div class="mb-1 row">
@@ -81,5 +81,5 @@
             </div>
         </form>
     </div>
-</div>
+</div> -->
 @endsection

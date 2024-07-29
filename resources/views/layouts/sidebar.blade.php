@@ -6,6 +6,15 @@
                 <div class="nav-link-icon"><i class="material-icons">dashboard</i></div>
                 {{__('sidebar.dashboard')}}
             </a>
+            <a class="nav-link {{Request::is('user') ? 'active bg-light' : ''}}" href="{{route('dashboard')}}">
+                <div class="nav-link-icon"><i class="material-icons">group_add</i></div>
+                {{__('sidebar.user')}}
+            </a>
+
+            <a class="nav-link {{Request::is('user') ? 'active bg-light' : ''}}" href="{{route('dashboard')}}">
+                <div class="nav-link-icon"><i class="material-icons">settings</i></div>
+                {{__('sidebar.company')}}
+            </a>
 
             <!-- dropdown menu -->
             <!-- <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseDashboards" aria-expanded="false" aria-controls="collapseDashboards">
@@ -20,7 +29,7 @@
                         </div> -->
         </div>
     </div>
-    <!-- Drawer footer        -->
+    <!-- Drawer footer -->
     <div class="drawer-footer border-top">
         <div class="d-flex align-items-center">
             <i class="material-icons text-muted">account_circle</i>

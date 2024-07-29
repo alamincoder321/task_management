@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -14,3 +15,7 @@ Route::get('/logout', [DashboardController::class, 'Logout'])->middleware('auth'
 //dashboard route
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 Route::get('language/{id}', [DashboardController::class, 'language'])->name('language');
+
+//user route
+Route::get('user', [UserController::class, 'create'])->name('user.create');
+Route::match(['get', 'post'],'user', [UserController::class, 'index'])->name('user.create');
