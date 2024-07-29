@@ -20,7 +20,7 @@ class RedirectIfAuthenticated
     public function handle(Request $request, Closure $next, $guard = null)
     {
         if (Auth::guard("web")->check()) {
-            return redirect('/module/dashboard');
+            return redirect('/dashboard');
         }
 
         return $next($request);
