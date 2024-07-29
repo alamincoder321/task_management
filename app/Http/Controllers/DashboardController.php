@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CompanyProfile;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class DashboardController extends Controller
 {
@@ -13,6 +16,27 @@ class DashboardController extends Controller
 
     public function index()
     {
-        return view("dashboard");
+        return view("pages.dashboard");
+    }
+
+
+    public function language($id)
+    {
+        CompanyProfile::first()->update([
+            'language' => $id
+        ]);
+        return back();
+    }
+
+    // admin logout
+    public function Logout()
+    {
+        try {
+            Auth::guard('web')->logout();
+            Session::flash('success', 'Logout successfully');
+            return redirect('/');
+        } catch (\Throwable $th) {
+            return send_error('Something went wrong', $th->getMessage());
+        }
     }
 }

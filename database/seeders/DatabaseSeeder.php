@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\CompanyProfile;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
@@ -24,6 +25,13 @@ class DatabaseSeeder extends Seeder
             'phone'      => '019########',
             'role'       => 'Superadmin',
             'ip_address' => request()->ip(),
+        ]);
+
+        CompanyProfile::create([
+            'name' => 'Company Name',
+            'title' => 'Company Title',
+            'email' => 'company@gmail.com',
+            'phone' => '017########',
         ]);
     }
 }

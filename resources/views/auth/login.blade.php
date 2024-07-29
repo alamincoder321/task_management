@@ -24,18 +24,18 @@
         <div class="container-login100" style="background-image: url('/auth/images/bg-01.jpg');">
             <div class="wrap-login100 p-t-30 p-b-50">
                 <span class="login100-form-title p-b-41">
-                    Account Login
+                    {{__('login.headerTitle')}}
                 </span>
                 <form onsubmit="AdminLogin(event)" class="login100-form validate-form p-b-33 p-t-5">
 
                     <div class="wrap-input100 validate-input" data-validate="Enter username">
-                        <input class="input100" type="text" name="username" placeholder="User name" autocomplete="off">
+                        <input class="input100" type="text" name="username" placeholder="{{__('login.username')}}" autocomplete="off">
                         <span class="focus-input100" data-placeholder="&#xe82a;"></span>
                         <p class="error-username m-0" style="font-style: italic;"></p>
                     </div>
 
                     <div class="wrap-input100 validate-input password" data-validate="Enter password">
-                        <input class="input100" type="password" name="password" placeholder="Password" autocomplete="off">
+                        <input class="input100" type="password" name="password" placeholder="{{__('login.password')}}" autocomplete="off">
                         <span class="focus-input100" data-placeholder="&#xe80f;"></span>
                         <i class="fa fa-eye" style="position: absolute;top: 40%;right: 30px;cursor:pointer;" onclick="passwordShow(event)"></i>
                         <p class="error-password m-0" style="font-style: italic;"></p>

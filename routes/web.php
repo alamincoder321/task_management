@@ -12,4 +12,5 @@ Route::get('/logout', [DashboardController::class, 'Logout'])->middleware('auth'
 
 
 //dashboard route
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('language/{id}', [DashboardController::class, 'language'])->name('language');
