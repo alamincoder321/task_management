@@ -11,7 +11,6 @@ Route::get('/', [LoginController::class, 'showUserLoginForm'])->name('user.login
 Route::post('/login', [LoginController::class, 'login'])->name('user.login');
 Route::get('/logout', [DashboardController::class, 'Logout'])->middleware('auth')->name('user.logout');
 
-
 //dashboard route
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 Route::get('language/{id}', [DashboardController::class, 'language'])->name('language');
