@@ -5,7 +5,7 @@
 @section('content')
 <div class="row gx-5">
     <div class="col-6 col-lg-4 mb-3">
-        <div class="card card-raised">
+        <div class="card card-raised" onclick="showModal()">
             <div class="card-header">Card Header</div>
             <div class="card-body">
                 <h2 class="card-title">Card Title</h2>

@@ -19,7 +19,10 @@ class CreateCompanyProfilesTable extends Migration
             $table->string('title');
             $table->string('email')->nullable();
             $table->string('phone', 15)->nullable();
+            $table->string('logo')->nullable();
+            $table->string('favicon')->nullable();
             $table->char('language')->default('en');
+            $table->ipAddress('ip_address');
             $table->timestamps();
         });
     }

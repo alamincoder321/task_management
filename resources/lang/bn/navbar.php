@@ -4,4 +4,5 @@ return [
     'logout' => "লগ আউট",
     'english' => "ইংলিশ",
     'bangla' => "বাংলা",
+    'copyright' => "কপিরাইট © " . date('Y')
 ];

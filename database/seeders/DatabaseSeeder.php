@@ -32,6 +32,7 @@ class DatabaseSeeder extends Seeder
             'title' => 'Company Title',
             'email' => 'company@gmail.com',
             'phone' => '017########',
+            'ip_address' => request()->ip()
         ]);
     }
 }

@@ -12,7 +12,12 @@
     <link href="{{'backend'}}/css/material_icon.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500" rel="stylesheet" />
-    <link href="{{asset('backend')}}/css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{asset('backend')}}/css/toastr.min.css" />
+    <link rel="stylesheet" href="{{asset('backend')}}/css/styles.css" />
+    <link rel="stylesheet" href="{{asset('backend')}}/css/vue-select.css" />
+    <link rel="stylesheet" href="{{asset('backend')}}/css/vue-good-table.css" />
+
+    @stack("style")
 </head>
 
 <body class="nav-fixed bg-light">
@@ -86,18 +91,56 @@
             <footer class="py-4 mt-auto border-top" style="min-height: 74px">
                 <div class="container-xl px-5">
                     <div class="d-flex flex-column flex-sm-row align-items-center justify-content-sm-between small">
-                        <div class="me-sm-2">Copyright © Your Website {{date('Y')}}</div>
+                        <div class="me-sm-2">{{__('navbar.copyright')}}</div>
                         <div class="d-flex ms-sm-2"></div>
                     </div>
                 </div>
             </footer>
         </div>
+
+
+        <!-- Modal-->
+        <div class="modal fade" id="exampleModalStatic" tabindex="-1" aria-labelledby="exampleModalStaticLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalStaticLabel">Get this party started?</h5>
+                        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control" />
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-text-danger me-2" type="button" data-bs-dismiss="modal">Close</button>
+                        <button class="btn btn-text-primary" type="button">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Load Bootstrap JS bundle-->
+    <script src="{{asset('backend')}}/js/jquery.min.js"></script>
     <script src="{{asset('backend')}}/js/bootstrap.bundle.min.js"></script>
     <script src="{{asset('backend')}}/js/material.js"></script>
     <script src="{{asset('backend')}}/js/scripts.js"></script>
-    <script src="{{asset('backend')}}/js/sb-customizer.js"></script>
+    <script src="{{asset('backend')}}/js/toastr.min.js"></script>
+
+    <script src="{{asset('backend')}}/js/vue/vue.min.js"></script>
+    <script src="{{asset('backend')}}/js/vue/lodash.min.js"></script>
+    <script src="{{asset('backend')}}/js/vue/vue-select.js"></script>
+    <script src="{{asset('backend')}}/js/vue/moment.js"></script>
+    <script src="{{asset('backend')}}/js/vue/axios.min.js"></script>
+    <script src="{{asset('backend')}}/js/vue/vue-good-table.min.js"></script>
+
+    <script>
+        Vue.component('v-select', VueSelect.VueSelect);
+
+        function showModal() {
+            $("#exampleModalStatic").modal("show");
+        }
+    </script>
+
+    @stack("js")
 </body>
 
 </html>

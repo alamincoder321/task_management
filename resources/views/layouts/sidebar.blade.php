@@ -11,7 +11,7 @@
                 {{__('sidebar.user')}}
             </a>
 
-            <a class="nav-link {{Request::is('user') ? 'active bg-light' : ''}}" href="{{route('dashboard')}}">
+            <a class="nav-link {{Request::is('company-profile') ? 'active bg-light' : ''}}" href="{{url('company-profile')}}">
                 <div class="nav-link-icon"><i class="material-icons">settings</i></div>
                 {{__('sidebar.company')}}
             </a>
@@ -34,7 +34,7 @@
         <div class="d-flex align-items-center">
             <i class="material-icons text-muted">account_circle</i>
             <div class="ms-3">
-                <div class="caption">Logged in as:</div>
+                <div class="caption">{{__('sidebar.loggedinas')}}</div>
                 <div class="small fw-500">{{Auth::user()->name}}</div>
             </div>
         </div>

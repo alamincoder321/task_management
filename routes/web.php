@@ -17,4 +17,4 @@ Route::get('language/{id}', [DashboardController::class, 'language'])->name('lan
 
 //user route
 Route::get('user', [UserController::class, 'create'])->name('user.create');
-Route::match(['get', 'post'],'user', [UserController::class, 'index'])->name('user.create');
+Route::match(['get', 'post'],'get-user', [UserController::class, 'index'])->name('user.create');
