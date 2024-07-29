@@ -145,6 +145,16 @@
                             <div class="small font-monospace text-center">Projects Dashboard</div>
                         </div>
                     </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label class="form-label" for="exampleFormControlInputDisabled">Email address</label>
+                            <input class="form-control" id="exampleFormControlInputDisabled" type="email" placeholder="name@example.com">
+
+                            <label class="form-label" for="exampleFormControlTextareaDisabled">Example textarea</label>
+                            <textarea class="form-control" id="exampleFormControlTextareaDisabled" rows="3"></textarea>
+                        </div>
+                    </div>
                 </div>
             </main>
             <!-- Footer-->
