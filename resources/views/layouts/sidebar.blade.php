@@ -6,7 +6,7 @@
                 <div class="nav-link-icon"><i class="material-icons">dashboard</i></div>
                 {{__('sidebar.dashboard')}}
             </a>
-            <a class="nav-link {{Request::is('user') ? 'active bg-light' : ''}}" href="{{route('dashboard')}}">
+            <a class="nav-link {{Request::is('user') ? 'active bg-light' : ''}}" href="{{url('user')}}">
                 <div class="nav-link-icon"><i class="material-icons">group_add</i></div>
                 {{__('sidebar.user')}}
             </a>

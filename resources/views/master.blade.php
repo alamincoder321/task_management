@@ -9,9 +9,11 @@
     <meta name="author" content="" />
     <title>{{$company->name}} - @yield('title')</title>
     <link href="{{asset('backend')}}/assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <script src="{{asset('backend')}}/js/vue/vue.min.js"></script>
     <link href="{{'backend'}}/css/material_icon.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500" rel="stylesheet" />
+    <link rel="stylesheet" href="{{asset('auth')}}/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{asset('backend')}}/css/toastr.min.css" />
     <link rel="stylesheet" href="{{asset('backend')}}/css/styles.css" />
     <link rel="stylesheet" href="{{asset('backend')}}/css/vue-select.css" />
@@ -83,7 +85,7 @@
         <!-- Layout content-->
         <div id="layoutDrawer_content">
             <main>
-                <div class="container-fluid p-5">
+                <div class="container-fluid pb-md-5 pt-md-3 ps-md-3 pe-md-4 py-4">
                     @yield('content')
                 </div>
             </main>
@@ -112,7 +114,9 @@
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-text-danger me-2" type="button" data-bs-dismiss="modal">Close</button>
-                        <button class="btn btn-text-primary" type="button">Save</button>
+                        <button class="btn btn-primary" type="button" disabled">
+                            <span class="spinner-border spinner-border-sm me-3" role="status" aria-hidden="true"></span> Save
+                        </button>
                     </div>
                 </div>
             </div>
@@ -125,7 +129,6 @@
     <script src="{{asset('backend')}}/js/scripts.js"></script>
     <script src="{{asset('backend')}}/js/toastr.min.js"></script>
 
-    <script src="{{asset('backend')}}/js/vue/vue.min.js"></script>
     <script src="{{asset('backend')}}/js/vue/lodash.min.js"></script>
     <script src="{{asset('backend')}}/js/vue/vue-select.js"></script>
     <script src="{{asset('backend')}}/js/vue/moment.js"></script>
